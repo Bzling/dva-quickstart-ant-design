@@ -6,8 +6,8 @@ import './index.css';
 const app = dva({
     initialState: {
         products: [
-            { name: 'dva', id: 1},
-            { name: 'antd', id: 2},
+            { name: 'John', age: 32, id: 1},
+            { name: 'Emma', age: 28, id: 2},
         ],
     }
 })
