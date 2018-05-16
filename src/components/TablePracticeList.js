@@ -44,7 +44,7 @@ class TablePracticeList extends React.Component{
         const { searchText } = this.state;
         const reg = new RegExp(searchText, 'gi');
         this.setState({
-            filterDropdownVisible: true,
+            filterDropdownVisible: false,
             filtered: !!searchText,
             data: data.map((record) => {
                 const match = record.username.match(reg);
@@ -159,7 +159,7 @@ class TablePracticeList extends React.Component{
                 <Button onClick={this.clearFilters}>Clear Filters</Button>
                 <Button onClick={this.clearAll}>Clear All</Button>
               </div>
-              <Table columns={columns} dataSource={data} onChange={this.handleChange} />
+              <Table columns={columns} dataSource={this.state.data} onChange={this.handleChange} />
             </div>
         )
     }
